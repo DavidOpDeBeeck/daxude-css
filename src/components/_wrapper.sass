@@ -1,0 +1,24 @@
+.wrapper
+    overflow-y: auto
+    flex: 1
+
+    > .wrapper-container
+        overflow-y: auto
+
+        margin: auto
+        width: $break-lg
+
+        word-wrap: break-word
+        word-break: break-all
+
+        padding: 0.5rem
+
+
+        @media screen and (max-width: $break-lg)
+            width: $break-md
+
+        @media screen and (max-width: $break-md)
+            width: $break-sm
+
+        @media screen and (max-width: $break-sm)
+            width: 100%

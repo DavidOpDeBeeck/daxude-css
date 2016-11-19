@@ -1,0 +1,14 @@
+{
+  "name": "daxude-css",
+  "version": "1.0.0",
+  "description": "Default CSS for daxude projects.",
+  "main": "node-sass.js",
+  "scripts": {
+    "sass": "node-sass src -o build --output-style compressed"
+  },
+  "author": "David Op de Beeck",
+  "license": "MIT",
+  "devDependencies": {
+    "node-sass": "^3.13.0"
+  }
+}

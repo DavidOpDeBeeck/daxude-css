@@ -1,0 +1,21 @@
+stage("git pull") {
+    node("master") {
+        git 'https://github.com/DavidOpDeBeeck/daxude-css.git'
+    }
+}
+stage("npm install / sass") {
+    node("master") {
+        bat 'npm install'
+        bat 'npm run sass'
+    }
+}
+stage("save artifacts") {
+    node("master") {
+        archiveArtifacts 'build/*.css'
+    }
+}
+stage("deploy to prod") {
+    node("master") {
+        build 'daxude-css-production'
+    }
+}

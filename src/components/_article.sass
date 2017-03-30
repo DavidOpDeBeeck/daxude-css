@@ -1,14 +1,11 @@
 .article-item
     display: flex
-    flex-direction: row
-    align-items: center
+    flex-direction: column
 
-    padding: 15px
+    padding: 15px 15px 10px 15px
     margin-top: 10px
 
-    border: 1px solid $color-border-secondary
-    background-color: $color-background-primary
-    box-shadow: 1px 1px 1px $color-box-shadow-primary
+    border-bottom: 1px solid $color-border-secondary
 
     > .article-info
         flex: 1
@@ -16,19 +13,27 @@
         flex-direction: column
 
         > h1
-            font-size: $font-size-lg
+            font-size: $font-size-md
+            text-transform: uppercase;
         > p
             font-size: $font-size-sm
             line-height: $line-height-md
+            font-family: $font-secondary
             
             margin-top: 10px
 
     > .article-action
-        flex: none
-        padding: 0 10px
+        flex: 1
+        display: flex
+        flex-direction: row-reverse
+        padding: 5px 0
 
-        > a > i
-            font-size: $font-size-xl
+        > a 
+            flex: none
+            font-size: $font-size-sm
+
+            &:before
+                content: 'VIEW'
 
 
 .article

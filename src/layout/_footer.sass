@@ -1,18 +1,62 @@
-.footer
+footer
   display: flex
   flex-direction: row
-  z-index: 2
-
   padding: 5px
+  margin: auto
+  width: $break-lg
+  background-color: $color-background-secondary
 
-  background-color: $color-background-primary
-  box-shadow: 1px -1px 1px -1px $color-box-shadow-primary
-  border-top: 1px solid $color-border-secondary
+  @media screen and (max-width: $break-lg)
+      width: $break-md
 
-  > .footer-item
+  @media screen and (max-width: $break-md)
+      width: $break-sm
+
+  @media screen and (max-width: $break-sm)
+      width: 100%
+
+  > section
     flex: 1
-    color: $color-primary
-    font-size: $font-size-sm
-    font-weight: $font-weight-md
-    text-align: left
-    text-transform: uppercase
+
+  > .links, .social-media
+    display: flex
+    flex-direction: column
+    align-items: center
+    flex-wrap: wrap
+
+    > h1
+      color: $color-secondary-dark
+      text-transform: uppercase
+      padding: 5px
+
+    > ul 
+      padding: 5px
+
+      > li
+        padding: 5px
+
+        > a
+          color: $color-primary
+          font-size: $font-size-md
+          font-weight: $font-weight-md
+          text-transform: uppercase  
+
+  > .links > ul > li > a
+    font-size: $font-size-md
+
+    > span.primary
+        font-weight: $font-weight-lg
+
+    > span.secondary
+        font-weight: $font-weight-xxs
+
+  > .social-media
+    > ul 
+      display: flex
+      flex-direction: row
+
+      > li
+        flex: none
+
+        > a
+          font-size: $font-size-lg

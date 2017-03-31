@@ -30,7 +30,16 @@
 
         > a 
             flex: none
+            color: $color-secondary
             font-size: $font-size-sm
+            padding: 5px
+            background-color: $color-background-primary
+            border: 1px solid $color-background-primary
+            box-shadow: 1px 1px 1px $color-box-shadow-primary
+            
+            &:hover
+                background-color: $color-background-primary-dark
+                border: 1px solid $color-background-primary-dark
 
             &:before
                 content: 'VIEW'

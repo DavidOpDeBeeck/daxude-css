@@ -25,7 +25,6 @@
             &.secondary
                 font-weight: $font-weight-xxs
 
-
     > .navbar-nav
         display: flex
         flex-direction: row-reverse
@@ -38,7 +37,7 @@
             cursor: pointer
 
             color: $color-primary
-            font-size: $font-size-sm
+            font-size: $font-size-md
             font-weight: $font-weight-md
             text-transform: uppercase
 
@@ -46,12 +45,12 @@
             padding: 0.35rem 0.35rem
 
             > span 
-              -webkit-touch-callout: none
+                -webkit-touch-callout: none
                 -webkit-user-select: none
-                 -khtml-user-select: none
-                   -moz-user-select: none
-                    -ms-user-select: none
-                        user-select: none
+                -khtml-user-select: none
+                -moz-user-select: none
+                -ms-user-select: none
+                user-select: none
 
             @media screen and (max-width: $break-md)
                 display: block
@@ -69,13 +68,9 @@
                 flex: none
                 margin: 0 0.25rem
 
-                &:hover
+                &:hover, &.active
                     > a
-                        border-bottom: 2px solid $color-primary;
-
-                &.active
-                    > a
-                        border-bottom: 2px solid $color-primary;
+                        border-bottom: 2px solid $color-primary
 
                 @media screen and (max-width: $break-md)
                     margin: 0.25rem 0
@@ -87,11 +82,12 @@
                     font-weight: $font-weight-md
                     text-transform: uppercase
                     margin: 0 5px
-                    padding: 5px 0
+                    padding: 5px
                     border-bottom: 2px solid transparent;
 
                     @media screen and (max-width: $break-md)
                         width: 100%
+                        text-align: center  
 
             @media screen and (max-width: $break-md)
                 position: absolute
@@ -102,6 +98,6 @@
                 padding: 0.25rem 20px
                 margin: 2rem 0 0 0
 
-                border-bottom: 1px solid $color-border-secondary
+                border-bottom: 1px solid $color-box-shadow-primary
                 box-shadow: 1px 1px 1px $color-box-shadow-primary
                 background-color: $color-background-primary

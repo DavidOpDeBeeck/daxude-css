@@ -1,6 +1,7 @@
 footer
   display: flex
   flex-direction: row
+  flex-wrap: wrap
   padding: 5px
   margin: auto
   width: $break-lg
@@ -17,6 +18,14 @@ footer
 
   > section
     flex: 1
+
+    @media screen and (max-width: $break-md)
+      min-width: 50%
+      margin-bottom: 5px
+
+    @media screen and (max-width: $break-sm)
+      min-width: 100%
+      margin-bottom: 5px
 
   > .links, .social-media
     display: flex

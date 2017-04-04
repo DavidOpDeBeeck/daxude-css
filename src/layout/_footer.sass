@@ -2,33 +2,26 @@ footer
   display: flex
   flex-direction: row
   flex-wrap: wrap
-  padding: 5px
+  padding: $spacing-sm
   margin: auto
-  width: $break-lg
+  max-width: $break-lg
+  width: 100%
   background-color: $color-background-secondary
 
   @media screen and (max-width: $break-lg)
-      width: $break-md
+      max-width: $break-md
 
   @media screen and (max-width: $break-md)
       flex-direction: column
-      width: $break-sm
-
-  @media screen and (max-width: $break-sm)
-      flex-direction: column
-      width: 100%
+      max-width: $break-sm
 
   > section
     flex: 1
     flex-wrap: wrap
 
     @media screen and (max-width: $break-md)
-      min-width: 100%
-      margin-bottom: 10px
-
-    @media screen and (max-width: $break-sm)
-      min-width: 100%
-      margin-bottom: 10px
+      width: 100%
+      margin-bottom: $spacing-md
 
   > .links, .social-media
     display: flex
@@ -39,14 +32,14 @@ footer
     > h1
       color: $color-secondary-dark
       text-transform: uppercase
-      padding: 5px
+      padding: $spacing-sm
 
     > ul 
       width: 100%
-      padding: 5px
+      padding: $spacing-sm
 
       > li
-        padding: 5px
+        padding: $spacing-sm
 
         > a
           display: flex

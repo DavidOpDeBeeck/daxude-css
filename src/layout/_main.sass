@@ -3,18 +3,14 @@ main
 
     > .container
         overflow-y: auto
-        width: calc(#{$break-lg} - 1rem)
-
+        max-width: $break-lg
+        width: 100%
         word-wrap: break-word
-
-        margin: auto
         padding: 0.5rem
+        margin: auto
 
         @media screen and (max-width: $break-lg)
-            width: calc(#{$break-md} - 1rem)
+            max-width: $break-md
 
         @media screen and (max-width: $break-md)
-            width: 100%
-
-        @media screen and (max-width: $break-sm)
             width: 100%

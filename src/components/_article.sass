@@ -1,9 +1,7 @@
 .article-item
     display: flex
     flex-direction: column
-
-    padding: 15px 15px 10px 15px
-
+    padding: $spacing-lg $spacing-lg $spacing-md
     border-bottom: 1px solid $color-border-secondary
 
     > .article-info
@@ -17,22 +15,21 @@
 
         > p
             font-size: $font-size-sm
-            line-height: $line-height-md
+            line-height: $line-height
             font-family: $font-secondary
-            
-            margin-top: 10px
+            margin-top: $spacing-md
 
     > .article-action
         flex: 1
         display: flex
         flex-direction: row-reverse
-        padding: 5px 0
+        padding: $spacing-sm 0
 
         > a 
             flex: none
             color: $color-secondary
             font-size: $font-size-sm
-            padding: 5px
+            padding: $spacing-sm
             background-color: $color-background-primary
             border: 1px solid $color-background-primary
             box-shadow: 1px 1px 1px $color-box-shadow-primary
@@ -43,51 +40,3 @@
 
             &:before
                 content: 'VIEW'
-
-
-.article
-    display: flex
-    flex-direction: column
-
-    padding: 15px
-    margin: 10px 0
-
-    > h1
-        font-size: $font-size-lg
-
-        padding: 0 0 10px 0
-        margin-bottom: 10px
-        border-bottom: 1px solid $color-border-primary
-
-    > .article-info
-        display: flex
-        flex-direction: row
-
-        margin-top: 10px
-        padding: 10px 0 0 0
-
-        border-top: 1px solid $color-border-primary
-
-        @media screen and (max-width: $break-sm)
-            display: block
-
-        > span
-            flex: 1;
-            font-size: $font-size-sm
-            font-weight: $font-weight-xs
-            font-style: italic
-            text-transform: uppercase
-
-            &:first-child
-                text-align: left
-
-            &:last-child
-                text-align: right
-
-                @media screen and (max-width: $break-sm)
-                    text-align: left
-
-            @media screen and (max-width: $break-sm)
-                display: block
-                line-height: $line-height-md
-                margin-bottom: 5px

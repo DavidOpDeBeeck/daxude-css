@@ -1,3 +1,46 @@
+article
+     display: flex
+     flex-direction: column
+     padding: $spacing-lg
+     margin: $spacing-md 0
+
+     > h1
+         font-size: $font-size-lg
+         padding: 0 0 $spacing-md 0		
+         margin-bottom: $spacing-md
+         border-bottom: 1px solid $color-border-primary
+
+     > .article-info
+         display: flex
+         flex-direction: row
+         margin-top: $spacing-md
+         padding: $spacing-md 0 0
+         border-top: 1px solid $color-border-primary
+
+         @media screen and (max-width: $break-sm)		
+             display: block
+ 		
+         > span
+            flex: 1
+            font-size: $font-size-sm
+            font-weight: $font-weight-xs
+            font-style: italic
+            text-transform: uppercase
+
+            &:first-child
+                text-align: left
+            
+            &:last-child
+                text-align: right
+
+                @media screen and (max-width: $break-sm)
+                    text-align: left
+
+            @media screen and (max-width: $break-sm)
+                display: block
+                line-height: $line-height
+                margin-bottom: $spacing-sm
+
 .article-item
     display: flex
     flex-direction: column
